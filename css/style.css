@@ -1,0 +1,359 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    background: #e29ee2;
+    transition: 2s;
+}
+
+.container{
+    height: 85vh;
+    width: 80vw;
+    background: #b45795;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 7px 7px 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    overflow: hidden;
+    transition: 2s;
+}
+
+.nav-bar{
+    height: 15%;
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    flex-basis: 50%;
+    margin-left: 15px;
+    /* background: lightcoral; */
+}
+.logo img{
+    height: 75px;
+}
+
+.nav-items{
+    flex-basis: 50%;
+    /* background: lightgreen; */
+    height: 100%;
+}
+
+.nav-items ul{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-right: 80px;
+    background: rgba(146, 41, 150, 0.2);
+    backdrop-filter: blur(20px);
+    border-radius: 0px 0px 10px 10px;
+    transform: translateY(-80px);
+    transition: 0.3s;
+}
+
+.nav-items ul li{
+    list-style: none;
+    transition: 0.2s;
+}
+
+.nav-items ul li:hover{
+    transform: scale(1.08);
+}
+
+.nav-items ul li a{
+    text-decoration: none;
+    color:white;
+} 
+
+.content{
+    height: 85%;
+    width: 100%;
+    /* background: royalblue; */
+    position: relative;
+}
+
+.content-text{
+    text-align: right;
+    margin-top: 60px;
+    margin-right: 30px;
+}
+
+.content-text h1{
+    font-size: 50px;
+    color: pink;
+    letter-spacing: 1.5px;
+}
+
+.content-text p{
+    color: white;
+    margin-top: 10px;
+}
+
+.content-image  img{
+    height: 450px;
+    border-radius: 50%;
+    position: absolute;
+    top: -38px;
+    left: 80px;
+}
+
+.object1{
+    height: 250px;
+    position: absolute;
+    top: -5px;
+    left: -20px;
+    z-index: -1;
+}
+
+.object2{
+    height: 250px;
+    position: absolute;
+    right: -30px;
+    bottom: -5px;
+    z-index: -1;
+}
+
+.bar,.remove{
+    font-size: 30px;
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    cursor: pointer;
+}
+
+.bar{
+    color: white;
+}
+
+.remove{
+    color: rgb(231,71,71);
+    display: none;
+}
+
+.mode{
+    color: white;
+    font-size: 25px;
+    position: absolute;
+    left: 20px;
+    bottom: 17px;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: 2s;
+}
+
+/* class for javscript click event */
+
+.navBar-js{
+    transform: translateY(0px) !important;
+}
+
+.barIcon-js{
+    display: none;
+}
+.error{
+    font-family: Assistant;
+    color: red;
+    font-size: 12pt;
+    width: 280px;
+    text-align: left;
+  }
+.removeIcon-js{
+    display: flex;
+}
+
+.container-js{
+    background: rgb(37,37,37) !important;
+}
+
+.body-js{
+    background: rgb(56,55,55) !important;
+}
+
+.mode-js{
+	transform: rotateY(180deg);
+}
+
+a{
+    color:white;
+    background-color: transparent;
+    text-decoration: none;
+  }
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  .btn1, .btn2 {
+    float: left;
+    height: 30px;
+    width: 80px;
+    outline: none;
+    color: white;
+    letter-spacing: 1.5px;
+    margin-top: 25px;
+    margin-left: 90%;
+    cursor: pointer;
+    transition: 0.2s;
+    background: none;
+    border: 3px solid #773c5e;
+  
+}
+
+  
+
+  button:hover {
+    transform: scale(1.08);
+    opacity:1;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+  }
+
+  /* Extra styles for the cancel button */
+  .cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+  }
+  
+  
+  .container2 {
+    padding: 16px;
+   
+  }
+  
+  span.psw {
+    float: right;
+    padding-top: 16px;
+  }
+  
+  /* The Modal (background) */
+  .modal2 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+  }
+  
+  /* Modal Content/Box */
+  .modal2-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 60%; /* Could be more or less, depending on screen size */
+    height: 70%;
+  }
+  
+  /* The Close Button (x) */
+  .close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: red;
+    cursor: pointer;
+  }
+  
+  .cancelbtn1,.signupbtn {
+    float: left;
+    width: 20%;
+    height: 20%;
+    margin-left: 20%;
+  }
+  .cancelbtn1{
+      background-color: red;
+  }
+
+ /* dashboardi */
+
+ .table-1 {
+	padding-left: 100px;
+	padding-right: 100px;
+	margin: 0 auto;
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+#dashboard-text {
+	padding-left: 100px;
+	padding-right: 100px;
+	text-align: center;
+	margin-bottom: 30px;
+	margin-top: 80px;
+	font-size: 30px;
+}
+.rows {
+	padding-left: 100px;
+	padding-right: 100px;
+	border: 1px solid black;
+	font-weight: bolder;
+	background-color: rgb(230, 36, 197);
+	color: black;
+}
+.table-data {
+	text-align: center;
+	border: 1px solid black;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+.table-data img {
+	position: initial;
+	margin: 0;
+	margin-top: 10px;
+	height: initial;
+}
+
+.table-data > a {
+	position: initial;
+	background: #444;
+	color: #fff;
+	border: 1px solid #333;
+	padding: 3px;
+	padding-left: 13px;
+	padding-right: 13px;
+	border-radius: 6px;
+	text-transform: uppercase;
+	font-size: 16px;
+	transition: 0.4s linear;
+	cursor: pointer;
+}
+
+.dashboard-h1 {
+	padding-left: 100px;
+	padding-right: 100px;
+	margin-top: 100px;
+	font-size: 22px;
+	text-align: center;
+}
+
